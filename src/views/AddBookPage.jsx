@@ -7,9 +7,8 @@ import { collection, getDocs, query, where, addDoc } from "firebase/firestore";
 import { selectUser } from "../store/userSlice.js";
 import { useSelector } from "react-redux";
 
-
-
 function AddBookPage() {
+  const name = "";
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const user = useSelector(selectUser);
@@ -27,7 +26,6 @@ function AddBookPage() {
     };
 
     if (newBook.title && newBook.cover && newBook.author) {
- 
       try {
         const docRef = await addDoc(collection(db, "book"), newBook);
         console.log("Document written with ID:", docRef.id);
