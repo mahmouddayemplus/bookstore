@@ -11,7 +11,7 @@ function BooksPage() {
   const [books, setBooks] = useState([]);
   const [loading, setloading] = useState(true);
   // const books = useSelector(selectBooks);
-  const pageTitle = "📖 Book List with Router, Redux & Firebase";
+  const pageTitle = "📖 Eyad Book Store  List with Router, Redux & Firebase";
   const user = useSelector(selectUser);
 
   useEffect(() => {
